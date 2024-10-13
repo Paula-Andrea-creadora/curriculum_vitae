@@ -1,0 +1,165 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');  fuente de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /*fuente de google fonts que tiene krona + montserrat*/
+
+/* Esta version tiene simplificacion de variables y tambien muestra como configurar las otras versiones telefono, computadora, etc*/
+/*Cambien cambie la unidad de medida de px ---> rem  __1rem---16px*/
+/*Cambio las unidades para que se configure bien   % */
+
+
+ /* declaracion de variables sirve para simplificar y que sea mas eficiente*/
+:root{
+    --color-primario:#000000;
+    --color-secundario:#F6F6F6F6;
+    --color-terciario:#22D4FD;
+    --color-hover:#272727;
+
+    --fuente-montserrat:"Montserrat", sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+*{ /* cambio universal*/
+    padding: 0;
+    margin: 0;
+}
+
+body{ /* cuerpo*/
+    background-color: var(--color-primario); /* fondo */
+    color: var(--color-secundario);  /* letras */
+    /*height: 100vh;   */
+    box-sizing: border-box; /* El valor border-box en el box-sizing hace que el padding 
+    y el border pasen a formar parte del cálculo del ancho de la caja y no lo suman posteriormente*/
+}
+
+.header{ /* encabezamiento*/
+    padding: 2% 0% 0% 15%;
+
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat); /*fuente de texto*/
+    font-size: 1.5rem ; /* tamaño de la fuente */
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;  
+}
+
+
+
+.titulo-destaque{
+    color: var(--color-terciario);  
+}
+
+.presentacion{
+    /* flexbox */
+    display:flex; /* alineado en linea */ 
+    align-items: center; /* centralizado de acuerdo al mayor */
+    /*margin: 10% 15%;  margen vertical y horizontal */
+    padding: 5% 15%; /*separacion del borde*/
+    justify-content: space-between;
+    gap:82px; /*separacion de la imagen y del texto*/
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* separacion*/
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2.25rem; /* tamaño de la fuente */
+    font-family: var(--fuente-krona); /* fuente */
+
+}
+
+.presentacion__contenido__texto{
+    font-family: var(--fuente-montserrat); /*fuente de texto*/
+    font-size: 1.5rem ; /* tamaño de la fuente */
+}
+
+.presentacion__contenido__texto a{
+    text-decoration: none;
+    color: var(--color-terciario);
+}
+
+.presentacion__enlaces{ /*botones*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*botones en el centro*/
+    gap:32px; /*separacion espacio*/
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family:var(--fuente-krona) ;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion__enlaces__link{
+    display: flex;
+    justify-content: center; /*eje horizontal*/
+    width: 50%; /*anchura*/
+   /* background-color: #22D4FD;boton color de fondo*/
+    text-align: center; /*alineacion del texto en el boton*/
+    padding:21.5px 0 ; /*separacion del borde*/
+    border-radius: 8px ;  /*borde redondeado*/
+    font-family: var(--fuente-montserrat); /*fuente de texto*/
+    font-size: 1.5rem ; /* tamaño de la fuente */
+    font-weight: 600 ; /*grosor de la fuente del texto */
+    text-decoration: none; /*sin decoracion*/
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario); /*grosor solido tipo  color*/
+    /*posicionar iconos alineados al texto del boton*/
+    
+    gap:16px; /*separacion del icono con texto*/
+}
+
+.presentacion__enlaces__link:hover {  /*alteración del aspecto de un componente de la 
+    interfaz gráfica una vez
+     que se posa el ratón sobre él,
+     aunque no haya sido seleccionado*/
+     background-color: var(--color-hover);
+
+}
+
+.presentacion__imagen{
+    width: 100%; /*la imagen siempre sera del 100%*/
+}
+
+
+.footer{ /* pie de pagina*/
+    background-color: var(--color-terciario);
+    padding: 1.5rem;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat); /*fuente de texto*/
+    font-size: 24px ; /* tamaño de la fuente */
+    font-weight: 400;
+    
+}
+
+@media( max-width: 1200px){/* visor de la pantalla 1200px */
+
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse; /* de esta forma esta en columna- 1ro  la imagen debajo el texto */
+        padding: 5%;
+
+    }
+    
+    .presentacion__contenido{ /*el contenido se adapta a la pantalla */
+        width: auto;
+    }
+}
