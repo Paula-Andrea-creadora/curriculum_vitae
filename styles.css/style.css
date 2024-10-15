@@ -24,6 +24,7 @@
 }
 
 body{ /* cuerpo*/
+    height: 100vh;
     background-color: var(--color-primario); /* fondo */
     color: var(--color-secundario);  /* letras */
     /*height: 100vh;   */
