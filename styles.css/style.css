@@ -145,7 +145,7 @@ body{ /* cuerpo*/
     
 }
 
-@media( max-width: 1200px){/* visor de la pantalla 1200px */
+@media( max-width: 800px){/* visor de la pantalla 1200px */
 
     .header{
         padding: 10%;
