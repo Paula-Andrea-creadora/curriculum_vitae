@@ -152,6 +152,8 @@ body{ /* cuerpo*/
     }
 
     .header__menu{
+        display: flex;
+        flex-direction:column;
         justify-content: center;
     }
 
